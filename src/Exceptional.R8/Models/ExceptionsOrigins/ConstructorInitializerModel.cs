@@ -18,7 +18,7 @@ namespace ReSharper.Exceptional.Models.ExceptionsOrigins
         }
 
         public ConstructorInitializerModel(ConstructorDeclarationModel analyzeUnit, IConstructor constructor, ConstructorDeclarationModel containingBlock)
-            : base(analyzeUnit, analyzeUnit.Node.Name)
+            : base(analyzeUnit, analyzeUnit.Node)
         {
             ContainingBlock = containingBlock;
             ThrownExceptions = ThrownExceptionsReader.Read(analyzeUnit, this, constructor);
